@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap');
+.attribution {
+    text-transform: none;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+.mobile {
+    display: none;
+}
+
+.headings {
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Barlow', sans-serif;
+    text-transform: uppercase;
+    padding: 30px 50px 0 50px;
+    background-image: url(./images/illustration-devices.svg);
+    background-size: calc(80% - 18vw);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-x: calc(59vw);
+}
+
+nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    cursor: pointer;
+    margin: 0px 22px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+li.auth {
+    list-style: outside;
+    margin-left: 24px;
+    padding-left: 15px;
+    color: hsl(230, 11%, 40%);
+}
+
+nav ul li:hover {
+    text-decoration: underline;
+}
+
+label {
+    width: 32px;
+    height: 32px;
+}
+
+.burger-btn {
+    width: 100%;
+    height: 100%;
+    background-image: url(./images/icon-hamburger.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+label input {
+    display: none;
+}
+
+input:checked+.burger-btn {
+    background-image: url(./images/icon-close.svg);
+}
+
+nav ul.mobile {
+    position: absolute;
+    flex-direction: column;
+    top: 35px;
+    left: 0;
+    right: 0;
+    background-color: white;
+    padding: 0;
+    text-align: center;
+    height: 0;
+}
+
+nav ul.mobile li,
+ul.mobile li.auth {
+    list-style: none;
+    padding: 0;
+    margin: 18px 30px;
+    letter-spacing: 2px;
+}
+
+ul.mobile li.auth {
+    border-top: 1px solid darkgrey;
+    padding-top: 25px;
+}
+
+nav ul.mobile.show {
+    padding: 10px 0;
+    transition: all .2s ease-in;
+    height: auto;
+    box-shadow: -2px 0px 7px 1px #00000040;
+}
+
+nav ul.mobile.show li {
+    transition: all .1s ease-in;
+    display: block;
+}
+
+nav ul.mobile.hide {
+    transition: all .4s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+    height: 0;
+}
+
+nav ul.mobile.hide li {
+    transition: all .1s ease-out;
+    display: none;
+}
+
+main {
+    margin: 80px 0 80px 0;
+    width: 80%;
+}
+
+section.illustration {
+    width: 50%;
+}
+
+section p span {
+    font-weight: 700;
+    background-color: black;
+    color: white;
+    padding: 2px 15px;
+    border-radius: 20px;
+    margin-right: 7px;
+    letter-spacing: 0;
+}
+
+section p:nth-child(1),
+section div p {
+    letter-spacing: 5px;
+    color: hsl(231, 7%, 65%);
+    font-weight: 400;
+    font-size: calc(15px + 0.8vw - 0.3vh);
+    text-transform: uppercase;
+}
+
+header h1 {
+    margin: 0;
+    font-size: calc(7vw - 2vh);
+}
+
+section p {
+    text-transform: none;
+    font-size: calc(5px + 0.7vh + 1vw);
+    color: hsl(230, 11%, 40%);
+    font-weight: 700;
+    margin: 5px 0;
+}
+
+section div {
+    display: flex;
+    align-items: center;
+    margin-top: calc(25px + 0.5vw);
+}
+
+button {
+    padding: 12px calc(10px + 1vw);
+    margin-right: 18px;
+    background-color: hsl(0, 100%, 68%);
+    color: wheat;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: calc(10px + 0.8vw - 0.3vh);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: hsla(0, 100%, 68%, 0.71);
+}
+
+header {
+    margin-bottom: calc(20px + 0.3vw);
+}
+
+@media (max-width:610px) {
+    body {
+        padding: 30px 20px 1px 20px;
+        background-position-y: 100px;
+        background-size: 130vw;
+        background-position-x: 5vw;
+    }
+    .desktop {
+        display: none;
+    }
+    .mobile {
+        display: block;
+    }
+    main {
+        margin-top: 80vw;
+        width: 100%;
+    }
+    section p:nth-child(1),
+    section div p {
+        font-size: calc(12px + 0.9vw);
+    }
+    header h1 {
+        font-size: calc(18px + 6.5vw);
+    }
+    section p {
+        font-size: calc(16px + 1vw);
+    }
+    button {
+        font-size: calc(10px + 1vw);
+        width: 135px;
+    }
+}

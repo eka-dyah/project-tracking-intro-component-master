@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+    <title>Frontend Mentor | Project tracking intro component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <div style="flex: 1 0 auto;">
+        <nav>
+            <img src="./images/logo.svg" alt="">
+            <label for="checkbox" class="mobile">
+              <input type="checkbox" id="checkbox" name="checkbox">
+              <div class="burger-btn"></div>
+              <ul class="mobile hide">
+                  <li class="headings">Product</li>
+                  <li class="headings">Features</li>
+                  <li class="headings">Pricing</li>
+                  <li class="auth headings">Login</li>
+              </ul>
+            </label>
+            <ul class="desktop">
+                <li class="headings">Product</li>
+                <li class="headings">Features</li>
+                <li class="headings">Pricing</li>
+                <li class="auth headings">Login</li>
+            </ul>
+        </nav>
+        <main>
+            <section>
+                <p class="headings"><span>New</span> Monograph Dashboard</p>
+                <header class="headings">
+                    <h1>Powerful insights</h1>
+                    <h1>into your team</h1>
+                </header>
+                <p>Project planning and time tracking</p>
+                <p>for agile teams</p>
+                <div>
+                    <button class="headings">Schedule a demo</button>
+                    <p class="desktop headings">to see a live preview</p>
+                    <p class="mobile headings">to see preview</p>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <footer>
+        <p class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Your Name Here</a>.
+        </p>
+    </footer>
+    <script>
+        const toggleBurger = document.querySelector('input[type="checkbox"');
+        toggleBurger.addEventListener('change', function(e) {
+            if (e.target.checked) {
+                document.querySelector('ul.mobile').classList.remove('hide');
+                document.querySelector('ul.mobile').classList.toggle('show');
+            } else {
+                document.querySelector('ul.mobile').classList.toggle('hide');
+                document.querySelector('ul.mobile').classList.remove('show');
+            }
+        });
+    </script>
+</body>
+
+</html>
